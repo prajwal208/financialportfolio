@@ -1,0 +1,111 @@
+:root {
+  --bg: #f6fbff;
+  --bg2: #ffffff;
+  --text: #0b1b33;
+  --text-strong: #071325;
+  --muted: #475569;
+  --border: rgba(15, 23, 42, 0.12);
+  --card: rgba(255, 255, 255, 0.92);
+  --code-bg: rgba(15, 23, 42, 0.05);
+
+  --primary: #0b4db3; /* dark fintech blue */
+  --primary2: #38bdf8; /* subtle sky */
+  --primarySoft: rgba(11, 77, 179, 0.12);
+  --primaryBorder: rgba(11, 77, 179, 0.22);
+  --ring: rgba(56, 189, 248, 0.55);
+
+  --shadow: 0 20px 60px rgba(11, 77, 179, 0.12);
+
+  --sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial,
+    'Noto Sans', sans-serif;
+  --heading: var(--sans);
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  font: 16px/1.6 var(--sans);
+  letter-spacing: 0.01em;
+  color-scheme: light;
+  color: var(--text);
+  background: radial-gradient(1000px 520px at 18% -10%, rgba(56, 189, 248, 0.18), transparent 62%),
+    radial-gradient(800px 440px at 88% 0%, rgba(11, 77, 179, 0.14), transparent 60%),
+    linear-gradient(180deg, var(--bg), var(--bg2));
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #061327;
+    --bg2: #071a33;
+    --text: rgba(255, 255, 255, 0.8);
+    --text-strong: rgba(255, 255, 255, 0.95);
+    --muted: rgba(255, 255, 255, 0.68);
+    --border: rgba(255, 255, 255, 0.12);
+    --card: rgba(10, 25, 49, 0.7);
+    --code-bg: rgba(255, 255, 255, 0.06);
+    --primarySoft: rgba(56, 189, 248, 0.16);
+    --primaryBorder: rgba(56, 189, 248, 0.3);
+    --ring: rgba(56, 189, 248, 0.5);
+
+    --shadow: 0 20px 60px rgba(56, 189, 248, 0.12);
+  }
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--heading);
+  font-weight: 750;
+  color: var(--text-strong);
+}
+
+h1 {
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0;
+}
+h2 {
+  font-size: 24px;
+  line-height: 118%;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+}
+
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
+p {
+  margin: 0;
+}
+
+code,
+.counter {
+  font-family: var(--mono);
+  display: inline-flex;
+  border-radius: 4px;
+  color: var(--text-strong);
+}
+
+code {
+  font-size: 15px;
+  line-height: 135%;
+  padding: 4px 8px;
+  background: var(--code-bg);
+}
