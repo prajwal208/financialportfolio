@@ -19,6 +19,40 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  useEffect(() => {
+    const prefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)',
+    ).matches
+    if (prefersReducedMotion) return
+
+    const targets = Array.from(
+      document.querySelectorAll<HTMLElement>(
+        '.card, .miniFeature, .logoPill, .stepCard, .ctaCard, .emiWrap, .contactItem, .mapFrameWrap, .sectionHeader, .heroCard, .heroGrid, .statsGrid, .testimonialsGrid',
+      ),
+    )
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            ;(entry.target as HTMLElement).classList.add('isVisible')
+          }
+        }
+      },
+      { threshold: 0.14 },
+    )
+
+    targets.forEach((el, i) => {
+      el.classList.add('revealItem')
+      // Stagger animations so the page doesn't feel like it "pops" all at once.
+      const delayMs = Math.min(600, i * 90)
+      el.style.setProperty('--reveal-delay', `${delayMs}ms`)
+      observer.observe(el)
+    })
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div>
       <SiteHeader />

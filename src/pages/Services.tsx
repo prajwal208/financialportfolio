@@ -169,7 +169,7 @@ export default function Services() {
               </div>
             </div>
 
-            <div className="grid4" style={{ gridTemplateColumns: 'repeat(2, minmax(0, 1fr))' }}>
+            <div className="servicesGrid">
               {services.map((s) => (
                 <div key={s.title} className="card">
                   <div className="cardTitle">
