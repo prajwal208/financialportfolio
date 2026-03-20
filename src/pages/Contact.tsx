@@ -1,5 +1,8 @@
 import { type FormEvent, useMemo, useState } from 'react'
 
+import contactHeroImg from '../assets/financial3.jpg'
+import contactAsideImg from '../assets/tab-aside-image-alt.jpg'
+
 function isValidEmail(email: string) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())
 }
@@ -79,6 +82,25 @@ export default function Contact() {
   return (
     <div className="pageEnter">
       <main>
+        <section className="finSubHero" aria-label="Contact hero">
+          <div className="finSubHeroBg" aria-hidden="true">
+            <img src={contactHeroImg} className="finSubHeroImg" alt="" />
+            <div className="finSubHeroOverlay" />
+          </div>
+          <div className="container finSubHeroInner">
+            <div className="finSubHeroContent">
+              <div className="finHeroKicker">Get in touch</div>
+              <h1 className="finHeroTitle finSubHeroTitle" style={{ margin: 0 }}>
+                Contact BluePeak Finance
+              </h1>
+              <p className="finHeroSub finSubHeroSub" style={{ marginBottom: 0 }}>
+                Send a message and our team will reach out with next steps—usually within
+                one business day.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="section">
           <div className="container">
             <div className="sectionHeader">
@@ -157,7 +179,13 @@ export default function Contact() {
                 </form>
               </div>
 
-              <div style={{ display: 'grid', gap: 14 }}>
+              <div className="contactRight">
+                <div className="contactAsideMedia" aria-hidden="true">
+                  <img src={contactAsideImg} className="contactAsideImg" alt="" />
+                  <div className="contactAsideOverlay" />
+                </div>
+
+                <div style={{ display: 'grid', gap: 14 }}>
                 <div className="contactItem">
                   <div className="contactLabel">Phone</div>
                   <div className="contactValue">
@@ -184,6 +212,7 @@ export default function Contact() {
                       contactDetails.mapQuery,
                     )}&output=embed`}
                   />
+                </div>
                 </div>
               </div>
             </div>

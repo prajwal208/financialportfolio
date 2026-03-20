@@ -1290,3 +1290,1084 @@ body {
   }
 }
 
+/* ---- Fintech redesign (premium sections) ---- */
+
+.finSection {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.finHero {
+  position: relative;
+  padding: 64px 0 40px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 19, 39, 0.98) 0%,
+    rgba(6, 19, 39, 0.9) 35%,
+    rgba(6, 19, 39, 0.0) 100%
+  );
+}
+
+.finHeroBg {
+  position: absolute;
+  inset: 0;
+}
+
+.finHeroBgImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.03);
+  transform: scale(1.01);
+}
+
+.finHeroBgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 19, 39, 0.98) 0%,
+    rgba(6, 19, 39, 0.85) 45%,
+    rgba(6, 19, 39, 0.35) 100%
+  );
+}
+
+.finHeroInner {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 26px;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.finHeroCopy {
+  position: relative;
+  z-index: 2;
+  padding-top: 16px;
+  max-width: 700px;
+}
+
+.finHeroKicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  background: rgba(56, 189, 248, 0.12);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 900;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.finHeroTitle {
+  color: rgba(255, 255, 255, 0.98);
+  font-weight: 950;
+  letter-spacing: -0.04em;
+  line-height: 1.02;
+  font-size: clamp(34px, 4vw, 56px);
+  margin: 0 0 14px;
+  max-width: 620px;
+}
+
+.finHeroSub {
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 650;
+  line-height: 1.75;
+  font-size: 18px;
+  margin: 0 0 22px;
+  max-width: 58ch;
+}
+
+.finHeroActions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+
+.btnExplore {
+  background: linear-gradient(
+    180deg,
+    rgba(235, 255, 94, 0.95),
+    rgba(196, 234, 60, 0.92)
+  ) !important;
+  border-color: rgba(196, 234, 60, 0.55) !important;
+  color: rgba(6, 19, 39, 0.98) !important;
+  font-weight: 1000;
+  padding: 12px 18px !important;
+}
+
+.btnExplore:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 60px rgba(196, 234, 60, 0.16);
+}
+
+.finHeroArrowCircle {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: inline-grid;
+  place-items: center;
+  background: rgba(6, 19, 39, 0.95);
+  color: rgba(235, 255, 94, 1);
+  margin-left: 6px;
+}
+
+.finHeroArrowCircle svg {
+  width: 16px;
+  height: 16px;
+}
+
+.finHeroHowItWorks {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92) !important;
+  font-weight: 950;
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.finHeroHowItWorks:hover {
+  transform: translateY(-2px);
+  background: transparent;
+}
+
+.finHeroPlay {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  color: rgba(6, 19, 39, 0.98);
+}
+
+.finHeroSlider {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 1000;
+}
+
+.finHeroSliderArrow {
+  font-size: 22px;
+  line-height: 1;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.finHeroSliderLine {
+  width: 250px;
+  height: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  position: relative;
+}
+
+.finHeroSliderFill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 32%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(235, 255, 94, 0.95), rgba(56, 189, 248, 0.95));
+}
+
+.finHeroSliderMark {
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.finHeroSliderMarkRight {
+  opacity: 0.75;
+}
+
+.finHeroScroll {
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-90deg);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.72);
+  font-weight: 850;
+  letter-spacing: 0.04em;
+  font-size: 12px;
+  user-select: none;
+}
+
+.finHeroMedia {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  min-height: 420px;
+  background: #061327;
+}
+
+.finHeroImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.finHeroMediaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      90deg,
+      rgba(6, 19, 39, 0.98) 0%,
+      rgba(6, 19, 39, 0.65) 48%,
+      rgba(6, 19, 39, 0.25) 100%
+    ),
+    radial-gradient(
+      700px 420px at 70% 10%,
+      rgba(56, 189, 248, 0.35),
+      transparent 60%
+    );
+}
+
+.finHeroWidget {
+  position: relative;
+  z-index: 2;
+  margin: 18px;
+  padding: 18px 18px 16px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(7, 26, 51, 0.62);
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.25);
+}
+
+.finHeroWidgetTitle {
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 950;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+  font-size: 16px;
+}
+
+.finHeroWidgetSteps {
+  display: grid;
+  gap: 12px;
+}
+
+.finHeroWidgetStep {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  transition: transform 180ms ease, border-color 180ms ease;
+}
+
+.finHeroWidgetStep:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.finHeroWidgetStepNum {
+  width: 42px;
+  height: 42px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-weight: 1000;
+  color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(56, 189, 248, 0.35);
+  background: rgba(56, 189, 248, 0.12);
+}
+
+.finHeroWidgetStepText {
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 750;
+  line-height: 1.35;
+  font-size: 14px;
+}
+
+.btnOnDark {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.btnOnDark:hover {
+  border-color: rgba(56, 189, 248, 0.35) !important;
+  background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.btnGhostOnDark {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.24) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+.btnGhostOnDark:hover {
+  border-color: rgba(56, 189, 248, 0.4) !important;
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.btnPrimary.btnOnDark {
+  background: linear-gradient(
+    180deg,
+    rgba(56, 189, 248, 0.95),
+    rgba(11, 77, 179, 0.95)
+  ) !important;
+  border-color: rgba(56, 189, 248, 0.35) !important;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.productCard {
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 150px 1fr;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.86);
+}
+
+.productImgWrap {
+  position: relative;
+}
+
+.productImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 220ms ease;
+}
+
+.productCard:hover .productImg {
+  transform: scale(1.08);
+}
+
+.productImgWrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 19, 39, 0.05) 0%,
+    rgba(6, 19, 39, 0.45) 100%
+  );
+}
+
+.productCardBody {
+  padding: 16px 16px 16px;
+  display: grid;
+  align-content: start;
+  gap: 10px;
+}
+
+.productCardTitle {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 1000;
+  color: var(--text-strong);
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.productIconWrap {
+  width: 40px;
+  height: 40px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.24);
+  color: var(--primary);
+  flex: 0 0 auto;
+}
+
+.productCardText {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 650;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.productLinkRow {
+  margin-top: 6px;
+}
+
+.productLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--primary);
+  font-weight: 950;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(11, 77, 179, 0.18);
+  background: rgba(11, 77, 179, 0.06);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.productLink:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadowSoft);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.finBenefitsGrid {
+  display: grid;
+  grid-template-columns: 0.98fr 1.02fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.benefitMedia {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  min-height: 420px;
+  background: #061327;
+}
+
+.benefitImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.benefitOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 19, 39, 0.98) 0%,
+    rgba(6, 19, 39, 0.55) 55%,
+    rgba(6, 19, 39, 0.18) 100%
+  );
+}
+
+.benefitBadge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(7, 26, 51, 0.62);
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 1000;
+}
+
+.checkList {
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.checkList li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.checkList li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.24);
+  color: var(--primary);
+  font-weight: 1000;
+  font-size: 14px;
+}
+
+.benefitCtaRow {
+  margin-top: 18px;
+}
+
+.finSubHero {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 40px;
+}
+
+.finSubHeroBg {
+  position: absolute;
+  inset: 0;
+}
+
+.finSubHeroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.finSubHeroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      90deg,
+      rgba(6, 19, 39, 0.98) 0%,
+      rgba(6, 19, 39, 0.6) 45%,
+      rgba(6, 19, 39, 0.18) 100%
+    ),
+    radial-gradient(900px 520px at 70% 0%, rgba(56, 189, 248, 0.25), transparent 62%);
+}
+
+.finSubHeroInner {
+  position: relative;
+  z-index: 2;
+}
+
+.finSubHeroContent {
+  max-width: 720px;
+}
+
+.finSubHeroSub {
+  max-width: 64ch;
+}
+
+.finSubHeroTitle {
+  font-size: clamp(30px, 4vw, 48px);
+}
+
+.serviceGrid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.serviceCard {
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 150px 1fr;
+}
+
+.serviceImgWrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform 220ms ease;
+}
+
+.serviceCard:hover .serviceImg {
+  transform: scale(1.08);
+}
+
+.serviceImgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 19, 39, 0.05) 0%,
+    rgba(6, 19, 39, 0.48) 100%
+  );
+}
+
+.serviceBody {
+  padding: 16px;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+}
+
+.finBenefits {
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+.teamCard {
+  padding: 0;
+  overflow: hidden;
+}
+
+.teamCardMedia {
+  position: relative;
+  height: 170px;
+  overflow: hidden;
+}
+
+.teamCardImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.teamCardMediaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 19, 39, 0.08) 0%,
+    rgba(6, 19, 39, 0.62) 100%
+  );
+}
+
+.teamAvatarWrap {
+  position: absolute;
+  left: 14px;
+  bottom: -22px;
+}
+
+.teamCardBody {
+  padding: 32px 16px 16px;
+  display: grid;
+  gap: 6px;
+}
+
+.aboutSection {
+  padding-top: 58px;
+  padding-bottom: 58px;
+  position: relative;
+}
+
+.aboutHeroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.aboutHeroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.aboutHeroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      90deg,
+      rgba(6, 19, 39, 0.96) 0%,
+      rgba(6, 19, 39, 0.55) 45%,
+      rgba(6, 19, 39, 0.22) 100%
+    );
+}
+
+.aboutHeroHeader {
+  position: relative;
+  z-index: 1;
+}
+
+.teamCard .cardText {
+  margin-top: 6px;
+}
+
+.contactRight {
+  display: grid;
+  gap: 12px;
+}
+
+.contactAsideMedia {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.7);
+  min-height: 140px;
+}
+
+.contactAsideImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contactAsideOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.84) 100%
+  );
+}
+
+@media (max-width: 980px) {
+  .finHeroInner {
+    grid-template-columns: 1fr;
+  }
+  .finHeroSlider {
+    left: 60%;
+    bottom: 14px;
+  }
+
+  .productGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .finBenefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .serviceGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+  .finHeroSlider {
+    left: 50%;
+    gap: 10px;
+  }
+  .finHeroSliderLine {
+    width: 150px;
+  }
+}
+
+/* ---- Follow-up UI tweaks (icons, testimonials, footer, about story) ---- */
+
+/* Home: How it works icons */
+.stepIconWrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 22px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(
+    180deg,
+    rgba(56, 189, 248, 0.95),
+    rgba(11, 77, 179, 0.95)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 55px rgba(11, 77, 179, 0.18);
+  color: #fff;
+  flex: 0 0 auto;
+}
+
+.stepIconWrap svg {
+  width: 26px;
+  height: 26px;
+}
+
+.stepIconWrap--a {
+  background: linear-gradient(
+    180deg,
+    rgba(56, 189, 248, 0.95),
+    rgba(11, 77, 179, 0.95)
+  );
+}
+
+.stepIconWrap--b {
+  background: linear-gradient(
+    180deg,
+    rgba(235, 255, 94, 0.95),
+    rgba(196, 234, 60, 0.92)
+  );
+  color: rgba(6, 19, 39, 0.98);
+}
+
+.stepIconWrap--c {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 185, 129, 0.95),
+    rgba(14, 116, 144, 0.92)
+  );
+}
+
+.stepIndex {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 950;
+  letter-spacing: 0.08em;
+  color: rgba(71, 85, 105, 0.9);
+}
+
+/* Home: Trusted Results icon emphasis */
+.statIconWrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    rgba(56, 189, 248, 0.95),
+    rgba(11, 77, 179, 0.95)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.statIconWrap svg {
+  width: 26px;
+  height: 26px;
+}
+
+.statIconWrap--a {
+  background: linear-gradient(
+    180deg,
+    rgba(56, 189, 248, 0.95),
+    rgba(11, 77, 179, 0.95)
+  );
+}
+
+.statIconWrap--b {
+  background: linear-gradient(
+    180deg,
+    rgba(235, 255, 94, 0.95),
+    rgba(196, 234, 60, 0.92)
+  );
+}
+
+.statIconWrap--c {
+  background: linear-gradient(
+    180deg,
+    rgba(99, 102, 241, 0.95),
+    rgba(56, 189, 248, 0.92)
+  );
+}
+
+.statIconWrap--d {
+  background: linear-gradient(
+    180deg,
+    rgba(251, 191, 36, 0.95),
+    rgba(59, 130, 246, 0.92)
+  );
+}
+
+/* Home: Testimonials layout */
+.testimonialCard {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 14px;
+  padding: 18px;
+}
+
+.testimonialTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonialStars {
+  color: #fbbf24;
+  font-weight: 1000;
+  letter-spacing: 0.08em;
+  font-size: 14px;
+  display: inline-flex;
+  gap: 2px;
+}
+
+.testimonialStar {
+  display: inline-block;
+  transform: translateY(-1px);
+}
+
+.testimonialAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  font-weight: 1000;
+  color: var(--primary);
+  background: rgba(56, 189, 248, 0.12);
+  border: 1px solid rgba(56, 189, 248, 0.24);
+}
+
+/* Footer: dark premium background */
+.siteFooter {
+  background: linear-gradient(
+    180deg,
+    rgba(6, 19, 39, 0.98),
+    rgba(6, 19, 39, 0.94)
+  );
+  border-top: 1px solid rgba(56, 189, 248, 0.18);
+}
+
+.siteFooter .brandName {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.siteFooter .footerHeading {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.siteFooter .footerLinks a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.siteFooter .footerLinks a:hover {
+  background: rgba(56, 189, 248, 0.12);
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.siteFooter .footerLinkItem {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.siteFooter .footerLinkItem:hover {
+  background: rgba(56, 189, 248, 0.12);
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.siteFooter .footerContactText {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.siteFooter .socialIconBtn {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.siteFooter .socialIconBtn:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+/* About: story section (no full-bleed image) */
+.aboutStoryGrid {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.aboutStoryBulletGrid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.aboutStoryCheckList {
+  margin: 0;
+}
+
+.aboutStoryMedia {
+  position: relative;
+  border-radius: 26px;
+  overflow: hidden;
+  min-height: 420px;
+  border: 1px solid rgba(11, 77, 179, 0.18);
+  background: #061327;
+}
+
+.aboutStoryMediaImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+}
+
+.aboutStoryMediaOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      90deg,
+      rgba(6, 19, 39, 0.96) 0%,
+      rgba(6, 19, 39, 0.55) 45%,
+      rgba(6, 19, 39, 0.22) 100%
+    ),
+    radial-gradient(
+      820px 500px at 65% 0%,
+      rgba(56, 189, 248, 0.28),
+      transparent 60%
+    );
+}
+
+@media (max-width: 980px) {
+  .aboutStoryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutStoryBulletGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About: approach cards */
+.aboutValueGrid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.aboutValueCard {
+  height: 100%;
+}
+
+@media (max-width: 980px) {
+  .aboutValueGrid {
+    grid-template-columns: 1fr;
+  }
+}
+

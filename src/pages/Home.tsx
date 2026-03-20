@@ -1,5 +1,12 @@
 import { Link } from 'react-router-dom'
+import AnimatedCounter from '../components/AnimatedCounter'
 import EmiCalculator from '../components/EmiCalculator'
+
+import heroImg from '../assets/home-hero.jpg'
+import benefitsImg from '../assets/tab-aside-image-alt.jpg'
+import productImg1 from '../assets/financial.jpg'
+import productImg2 from '../assets/financial2.jpg'
+import productImg3 from '../assets/financial3.jpg'
 
 function IconChart() {
   return (
@@ -204,33 +211,60 @@ function IconStar() {
   )
 }
 
+function IconPlay() {
+  return (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M10 8l8 4-8 4V8z"
+        fill="currentColor"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 export default function Home() {
-  const keyServices = [
+  const featuredProducts = [
     {
-      title: 'Investment Planning',
-      description:
-        'Build a tailored strategy that matches your goals, timeline, and risk comfort.',
+      title: 'Mutual Funds',
+      description: 'Diversified portfolios designed for clarity, discipline, and long-term growth.',
       icon: <IconChart />,
+      image: productImg1,
+    },
+    {
+      title: 'SIPs & Systematic Investing',
+      description: 'A disciplined way to build wealth over time—aligned to your goals and risk comfort.',
+      icon: <IconClock />,
+      image: productImg2,
+    },
+    {
+      title: 'Insurance Advisory',
+      description: 'Coverage strategies that protect your goals and help manage uncertainty with confidence.',
+      icon: <IconShield />,
+      image: productImg3,
     },
     {
       title: 'Wealth Management',
-      description:
-        'Professional portfolio oversight with a focus on diversification and growth.',
-      icon: <IconShield />,
+      description: 'Ongoing portfolio oversight and smart rebalancing for sustained financial outcomes.',
+      icon: <IconChartUp />,
+      image: productImg1,
     },
     {
-      title: 'Tax Consulting',
+      title: 'Tax Advisory',
       description:
-        'Clear guidance to help you stay compliant and optimize your financial outcomes.',
+        'Practical planning so you can keep more, stay compliant, and invest with confidence.',
       icon: <IconTax />,
+      image: productImg2,
     },
     {
       title: 'Retirement Planning',
-      description:
-        'Plan confidently with retirement projections, income planning, and smarter choices.',
+      description: 'Income projections and plan optimization for long-term financial security.',
       icon: <IconRetirement />,
+      image: productImg3,
     },
-  ]
+  ] as const
 
   const testimonials = [
     {
@@ -238,31 +272,61 @@ export default function Home() {
         'The team helped me build a clear plan for my investments. Everything felt transparent and well-structured.',
       name: 'Aarav Mehta',
       role: 'Investor',
+      initials: 'AM',
+      rating: 5,
     },
     {
       quote:
         'Professional, fast, and highly responsive. Their wealth management advice improved how we think about risk.',
       name: 'Neha Sharma',
       role: 'Business Owner',
+      initials: 'NS',
+      rating: 5,
     },
     {
       quote:
         'Tax season was stress-free. The guidance was practical, easy to follow, and genuinely helpful.',
       name: 'Karan Joshi',
       role: 'Freelancer',
+      initials: 'KJ',
+      rating: 5,
     },
   ]
 
   const stats = [
-    { value: '1,200+', label: 'Clients Served', icon: <IconUsers /> },
     {
-      value: '$2.4B+',
+      value: 1200,
+      decimals: 0,
+      suffix: '+',
+      label: 'Satisfied Clients',
+      icon: <IconUsers />,
+      variant: 'a',
+    },
+    {
+      value: 2.4,
+      decimals: 1,
+      suffix: 'B+',
       label: 'Investments Managed',
       icon: <IconChartUp />,
+      variant: 'b',
     },
-    { value: '10+ Years', label: 'Industry Experience', icon: <IconClock /> },
-    { value: '4.9/5', label: 'Client Satisfaction', icon: <IconStar /> },
-  ]
+    {
+      value: 12,
+      decimals: 0,
+      suffix: '+',
+      label: 'Years Experience',
+      icon: <IconClock />,
+      variant: 'c',
+    },
+    {
+      value: 4.9,
+      decimals: 1,
+      suffix: '/5',
+      label: 'Client Satisfaction',
+      icon: <IconStar />,
+      variant: 'd',
+    },
+  ] as const
 
   const clientLogos = [
     'NorthBridge Capital',
@@ -278,87 +342,102 @@ export default function Home() {
       title: 'Get a clear plan',
       description:
         'We assess your goals and risk comfort, then outline a strategy that’s easy to understand.',
+      icon: <IconChart />,
+      variant: 'a',
     },
     {
       title: 'Build & optimize',
       description:
         'We help you refine investments, account for taxes, and stay aligned with changing priorities.',
+      icon: <IconShield />,
+      variant: 'b',
     },
     {
       title: 'Review with confidence',
       description:
         'Ongoing check-ins ensure your plan remains relevant—and your decisions feel supported.',
+      icon: <IconRetirement />,
+      variant: 'c',
     },
   ]
 
   return (
     <div className="pageEnter">
       <main>
-        <section className="hero">
-          <div className="container heroGrid">
-            <div>
-              <div className="heroKicker">Premium fintech services</div>
-              <h1 className="heroTitle">Smart Financial Solutions for Your Future</h1>
-              <p className="heroSub">
-                Trusted advisory for investment planning, wealth management, tax consulting, and
-                retirement planning—designed to feel simple, clear, and professional.
+        <section className="finHero" aria-label="Hero">
+          <div className="finHeroBg" aria-hidden="true">
+            <img src={heroImg} className="finHeroBgImg" alt="" />
+            <div className="finHeroBgOverlay" />
+          </div>
+
+          <div className="container finHeroInner">
+            <div className="finHeroCopy">
+              <h1 className="finHeroTitle">
+                Your Trusted Financial Partner
+              </h1>
+              <p className="finHeroSub">
+                Unlock your financial potential with competitive rates, fast approvals, and
+                personalized lending solutions tailored to your needs.
               </p>
 
-              <div className="heroActions">
-                <Link className="btn btnPrimary" to="/services">
-                  Get Started <IconArrowRight />
+              <div className="finHeroActions">
+                <Link className="btn btnExplore" to="/services" aria-label="Explore more">
+                  Explore More
+                  <span className="finHeroArrowCircle" aria-hidden="true">
+                    <IconArrowRight />
+                  </span>
                 </Link>
-                <Link className="btn btnSecondary" to="/contact">
-                  Contact Us <IconArrowRight />
-                </Link>
+
+                
               </div>
+
+              
             </div>
 
-            <div className="heroCard" aria-label="Highlights">
-              <div className="heroCardGrid">
-                <div className="miniFeature">
-                  <div className="miniFeatureTitle">Transparent Strategy</div>
-                  <p className="miniFeatureText">Clear recommendations with no confusing jargon.</p>
-                </div>
-                <div className="miniFeature">
-                  <div className="miniFeatureTitle">Risk-Aware Planning</div>
-                  <p className="miniFeatureText">Designed around your comfort and long-term goals.</p>
-                </div>
-                <div className="miniFeature">
-                  <div className="miniFeatureTitle">Ongoing Support</div>
-                  <p className="miniFeatureText">Regular check-ins to keep you on track.</p>
-                </div>
-                <div className="miniFeature">
-                  <div className="miniFeatureTitle">Secure & Reliable</div>
-                  <p className="miniFeatureText">Modern practices for confidentiality and trust.</p>
-                </div>
-              </div>
-            </div>
+            <div aria-hidden="true" />
           </div>
         </section>
 
-        <section className="section" aria-label="Key services">
+        <section className="section finSection" aria-label="Featured financial products">
           <div className="container">
             <div className="sectionHeader">
               <div>
-                <h2 className="sectionTitle">Key Financial Services</h2>
+                <h2 className="sectionTitle">Featured financial products</h2>
                 <p className="sectionSubtitle">
-                  Everything you need to build, protect, and grow your wealth—supported by
-                  clear guidance and premium service.
+                  Clean guidance across mutual funds, systematic investing, insurance advisory, and
+                  disciplined wealth management.
                 </p>
               </div>
             </div>
 
-            <div className="grid4">
-              {keyServices.map((s) => (
-                <div key={s.title} className="card" role="article" aria-label={s.title}>
-                  <div className="cardTitle">
-                    <span className="iconWrap" aria-hidden="true">
-                      {s.icon}
-                    </span>
-                    {s.title}
+            <div className="productGrid" aria-label="Product cards">
+              {featuredProducts.map((p) => (
+                <div
+                  key={p.title}
+                  className="productCard card"
+                  role="article"
+                  aria-label={p.title}
+                >
+                  <div className="productImgWrap" aria-hidden="true">
+                    <img src={p.image} className="productImg" alt="" />
                   </div>
-                  <p className="cardText">{s.description}</p>
+
+                  <div className="productCardBody">
+                    <div className="productCardTitle">
+                      <span className="productIconWrap" aria-hidden="true">
+                        {p.icon}
+                      </span>
+                      {p.title}
+                    </div>
+                    <p className="productCardText">{p.description}</p>
+
+                    <div className="productLinkRow">
+                      <Link className="productLink" to="/services">
+                        Explore details
+                        <IconArrowRight />
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -391,8 +470,18 @@ export default function Home() {
               {steps.map((s, idx) => (
                 <div key={s.title} className="card stepCard">
                   <div className="stepTop">
-                    <div className="stepNumber">{idx + 1}</div>
-                    <div className="stepTitle">{s.title}</div>
+                    <div
+                      className={`stepIconWrap stepIconWrap--${s.variant}`}
+                      aria-hidden="true"
+                    >
+                      {s.icon}
+                    </div>
+                    <div>
+                      <div className="stepTitle">{s.title}</div>
+                      <div className="stepIndex" aria-hidden="true">
+                        {String(idx + 1).padStart(2, '0')}
+                      </div>
+                    </div>
                   </div>
                   <p className="cardText" style={{ marginTop: 10 }}>
                     {s.description}
@@ -403,84 +492,31 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section" aria-label="Why choose us">
+        <section className="section finSection finBenefits" aria-label="Why choose us">
           <div className="container">
-            <div className="twoCol">
-              <div className="card">
-                <div className="cardTitle">
-                  <span className="iconWrap" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M12 2l8 4v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4z"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  Why clients choose us
-                </div>
-                <p className="cardText">
-                  Premium financial advisory with a focus on transparency, risk awareness,
-                  and measurable next steps.
-                </p>
-                <ul className="list">
-                  <li>Clear recommendations and transparent decision-making</li>
-                  <li>Planning that accounts for taxes and real-world constraints</li>
-                  <li>Ongoing reviews so your strategy stays aligned</li>
-                </ul>
+            <div className="finBenefitsGrid">
+              <div className="benefitMedia" aria-hidden="true">
+                <img src={benefitsImg} className="benefitImg" alt="" />
+                <div className="benefitOverlay" />
+                <div className="benefitBadge">Long-term clarity, built-in</div>
               </div>
 
-              <div className="card">
-                <div className="cardTitle">
-                  <span className="iconWrap" aria-hidden="true">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M4 19V5"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M4 19H20"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                      />
-                      <path
-                        d="M8 15l3-3 3 2 4-6"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </span>
-                  Built for long-term outcomes
-                </div>
-                <p className="cardText">
-                  We help you set expectations, track progress, and make financial decisions
-                  with confidence.
+              <div>
+                <h2 className="sectionTitle">Why clients choose BluePeak</h2>
+                <p className="sectionSubtitle">
+                  Premium guidance that respects your goals, reduces complexity, and keeps your
+                  strategy moving with confidence.
                 </p>
-                <div className="miniBullets">
-                  <div className="miniBullet">
-                    <div className="miniBulletTitle">Portfolio clarity</div>
-                    <div className="miniBulletText">Understand what you own and why.</div>
-                  </div>
-                  <div className="miniBullet">
-                    <div className="miniBulletTitle">Tax-aware planning</div>
-                    <div className="miniBulletText">Reduce friction and surprises.</div>
-                  </div>
-                  <div className="miniBullet">
-                    <div className="miniBulletTitle">Confidence reviews</div>
-                    <div className="miniBulletText">Update your strategy as life changes.</div>
-                  </div>
-                </div>
 
-                <div style={{ marginTop: 16 }}>
-                  <Link className="btn btnPrimary" to="/contact" style={{ width: '100%' }}>
-                    Schedule a Consultation
-                    <IconArrowRight />
+                <ul className="checkList" aria-label="What you can expect">
+                  <li>Transparent recommendations in plain language</li>
+                  <li>Tax-aware planning designed around real-life constraints</li>
+                  <li>Disciplined reviews so you stay aligned as priorities change</li>
+                </ul>
+
+                <div className="benefitCtaRow">
+                  <Link className="btn btnPrimary" to="/contact">
+                    Schedule a Consultation <IconArrowRight />
                   </Link>
                 </div>
               </div>
@@ -499,8 +535,22 @@ export default function Home() {
 
             <div className="testimonialsGrid">
               {testimonials.map((t) => (
-                <div key={t.name} className="card">
+                <div key={t.name} className="card testimonialCard">
+                  <div className="testimonialTop">
+                    <div className="testimonialStars" aria-label={`Rating ${t.rating} out of 5`}>
+                      {Array.from({ length: t.rating }).map((_, i) => (
+                        <span key={i} className="testimonialStar" aria-hidden="true">
+                          ★
+                        </span>
+                      ))}
+                    </div>
+                    <div className="testimonialAvatar" aria-hidden="true">
+                      {t.initials}
+                    </div>
+                  </div>
+
                   <p className="testimonialQuote">“{t.quote}”</p>
+
                   <div className="testimonialFooter">
                     <div className="testimonialName">{t.name}</div>
                     <div className="testimonialRole">{t.role}</div>
@@ -525,10 +575,20 @@ export default function Home() {
             <div className="statsGrid">
               {stats.map((s) => (
                 <div key={s.label} className="card">
-                  <div className="statIconWrap" aria-hidden="true">
+                  <div
+                    className={`statIconWrap statIconWrap--${s.variant}`}
+                    aria-hidden="true"
+                  >
                     {s.icon}
                   </div>
-                  <div className="statValue">{s.value}</div>
+                  <div className="statValue">
+                    <AnimatedCounter
+                      value={s.value}
+                      suffix={s.suffix}
+                      decimals={s.decimals}
+                      durationMs={1000}
+                    />
+                  </div>
                   <p className="statLabel">{s.label}</p>
                 </div>
               ))}

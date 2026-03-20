@@ -9,10 +9,10 @@ export default function SiteFooter() {
             <div className="brandMark" aria-hidden="true" />
             <div className="brandName">BluePeak Finance</div>
           </div>
-          <div style={{ marginTop: 10, color: 'var(--muted)', fontWeight: 750 }}>
+          <div style={{ marginTop: 10, color: 'rgba(255, 255, 255, 0.68)', fontWeight: 750 }}>
             © {new Date().getFullYear()} BluePeak Finance. All rights reserved.
           </div>
-          <div style={{ marginTop: 10, color: 'var(--muted)', fontWeight: 750 }}>
+          <div style={{ marginTop: 10, color: 'rgba(255, 255, 255, 0.68)', fontWeight: 750 }}>
             Premium advisory for investments, taxes, and retirement planning.
           </div>
         </div>

@@ -1,5 +1,10 @@
 import { Link } from 'react-router-dom'
 
+import heroImg from '../assets/financial2.jpg'
+import cardImg1 from '../assets/financial.jpg'
+import cardImg2 from '../assets/financial2.jpg'
+import cardImg3 from '../assets/financial3.jpg'
+
 function IconChart() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -98,6 +103,45 @@ function IconRetirement() {
   )
 }
 
+function IconClock() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M12 22a10 10 0 1 0-10-10 10 10 0 0 0 10 10Z"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      <path
+        d="M12 6v6l4 2"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+function IconChartUp() {
+  return (
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path
+        d="M3 3v18h18"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M7 13l3-3 4 4 5-7"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
 function IconArrowRight() {
   return (
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -122,67 +166,107 @@ function IconArrowRight() {
 export default function Services() {
   const services = [
     {
-      title: 'Investment Planning',
-      description:
-        'A goal-based approach to help you invest with confidence and clarity.',
+      title: 'Mutual Funds',
+      description: 'A disciplined selection process designed to fit your risk profile.',
       icon: <IconChart />,
+      image: cardImg1,
+    },
+    {
+      title: 'SIPs (Systematic Investing)',
+      description: 'Start small, invest consistently, and stay aligned with long-term goals.',
+      icon: <IconClock />,
+      image: cardImg2,
+    },
+    {
+      title: 'Insurance Advisory',
+      description: 'Coverage strategies that protect what you’ve built and reduce uncertainty.',
+      icon: <IconShield />,
+      image: cardImg3,
+    },
+    {
+      title: 'Tax Advisory',
+      description: 'Practical planning so you can keep more, stay compliant, and invest smarter.',
+      icon: <IconTax />,
+      image: cardImg1,
     },
     {
       title: 'Wealth Management',
-      description:
-        'Portfolio oversight and strategy refinement to support long-term growth.',
-      icon: <IconShield />,
-    },
-    {
-      title: 'Tax Consulting',
-      description:
-        'Actionable guidance to help you understand obligations and optimize outcomes.',
-      icon: <IconTax />,
+      description: 'Portfolio oversight, rebalancing, and guidance built for sustained outcomes.',
+      icon: <IconChartUp />,
+      image: cardImg2,
     },
     {
       title: 'Retirement Planning',
-      description:
-        'Retirement forecasts and income planning to help you prepare for what’s next.',
+      description: 'Income projections and plan optimization for what’s next in life.',
       icon: <IconRetirement />,
+      image: cardImg3,
     },
-  ]
+  ] as const
 
   return (
     <div className="pageEnter">
       <main>
-        <section className="section">
-          <div className="container">
-            <div className="sectionHeader">
-              <div>
-                <h1 className="sectionTitle" style={{ fontSize: 34 }}>
-                  Our Services
-                </h1>
-                <p className="sectionSubtitle">
-                  Clean, premium advisory designed to keep you informed and in control.
-                </p>
-              </div>
+        <section className="finSubHero" aria-label="Financial products hero">
+          <div className="finSubHeroBg" aria-hidden="true">
+            <img src={heroImg} alt="" className="finSubHeroImg" />
+            <div className="finSubHeroOverlay" />
+          </div>
 
-              <div>
-                <Link className="btn btnPrimary" to="/contact">
-                  Request a Consultation <IconArrowRight />
+          <div className="container finSubHeroInner">
+            <div className="finSubHeroContent">
+              <div className="finHeroKicker">Financial products</div>
+              <h1 className="finHeroTitle finSubHeroTitle">Explore offerings built for clarity</h1>
+              <p className="finHeroSub finSubHeroSub">
+                Clean, premium advisory across mutual funds, systematic investing, insurance advisory,
+                taxes, and wealth management.
+              </p>
+
+              <div className="heroActions finHeroActions">
+                <Link className="btn btnPrimary btnOnDark" to="/contact">
+                  Book Consultation <IconArrowRight />
+                </Link>
+                <Link className="btn btnGhostOnDark" to="/">
+                  View Home <IconArrowRight />
                 </Link>
               </div>
             </div>
+          </div>
+        </section>
 
-            <div className="servicesGrid">
+        <section className="section finSection">
+          <div className="container">
+            <div className="sectionHeader">
+              <div>
+                <h2 className="sectionTitle">Our services</h2>
+                <p className="sectionSubtitle">
+                  Each offering includes a disciplined process, transparent communication, and
+                  ongoing guidance.
+                </p>
+              </div>
+            </div>
+
+            <div className="serviceGrid" aria-label="Service cards">
               {services.map((s) => (
-                <div key={s.title} className="card">
-                  <div className="cardTitle">
-                    <span className="iconWrap" aria-hidden="true">
-                      {s.icon}
-                    </span>
-                    {s.title}
+                <div key={s.title} className="serviceCard card">
+                  <div className="serviceImgWrap" aria-hidden="true">
+                    <img src={s.image} className="serviceImg" alt="" />
+                    <div className="serviceImgOverlay" />
                   </div>
-                  <p className="cardText">{s.description}</p>
-                  <div style={{ marginTop: 14 }}>
-                    <Link className="btn btnSecondary" to="/contact" style={{ width: '100%' }}>
-                      Talk to an Advisor <IconArrowRight />
-                    </Link>
+
+                  <div className="serviceBody">
+                    <div className="cardTitle">
+                      <span className="productIconWrap" aria-hidden="true">
+                        {s.icon}
+                      </span>
+                      {s.title}
+                    </div>
+                    <p className="cardText">{s.description}</p>
+
+                    <div className="productLinkRow">
+                      <Link className="productLink" to="/contact">
+                        Talk to an Advisor <IconArrowRight />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               ))}
