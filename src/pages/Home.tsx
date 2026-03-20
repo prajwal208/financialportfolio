@@ -211,20 +211,6 @@ function IconStar() {
   )
 }
 
-function IconPlay() {
-  return (
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-      <path
-        d="M10 8l8 4-8 4V8z"
-        fill="currentColor"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
-
 export default function Home() {
   const featuredProducts = [
     {
