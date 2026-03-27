@@ -64,9 +64,13 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading);
-  font-weight: 750;
+  font-weight: 700;
   color: var(--text-strong);
 }
 
@@ -82,6 +86,26 @@ h2 {
   margin: 0 0 8px;
 }
 
+h3 {
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: -0.2px;
+  margin: 0 0 8px;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 130%;
+  margin: 0 0 6px;
+}
+
+h5,
+h6 {
+  font-size: 16px;
+  line-height: 135%;
+  margin: 0 0 6px;
+}
+
 @media (max-width: 1024px) {
   h1 {
     font-size: 36px;
@@ -89,6 +113,14 @@ h2 {
   }
   h2 {
     font-size: 20px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 17px;
   }
 }
 p {

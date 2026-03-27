@@ -94,7 +94,7 @@ body {
 }
 
 .brandName {
-  font-weight: 800;
+  font-weight: 400;
   color: var(--text-strong);
   letter-spacing: -0.02em;
 }
@@ -112,7 +112,7 @@ body {
 }
 
 .navLink {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 14px;
   color: rgba(11, 77, 179, 0.7);
   padding: 8px 10px;
@@ -163,7 +163,7 @@ body {
   color: var(--text-strong);
   padding: 10px 12px;
   border-radius: 14px;
-  font-weight: 800;
+  font-weight: 400;
   cursor: pointer;
   height: 40px;
   display: inline-flex;
@@ -209,7 +209,7 @@ body {
   border: 1px solid var(--border);
   background: rgba(255, 255, 255, 0.75);
   color: var(--text-strong);
-  font-weight: 800;
+  font-weight: 400;
   cursor: pointer;
   text-decoration: none;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease,
@@ -257,7 +257,7 @@ body {
   border: 1px solid rgba(11, 77, 179, 0.18);
   background: rgba(56, 189, 248, 0.10);
   color: var(--muted);
-  font-weight: 800;
+  font-weight: 400;
   font-size: 14px;
   margin-bottom: 16px;
 }
@@ -268,7 +268,7 @@ body {
   letter-spacing: -0.04em;
   color: var(--text-strong);
   margin: 0 0 12px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .heroSub {
@@ -323,7 +323,7 @@ body {
 }
 
 .miniFeatureTitle {
-  font-weight: 900;
+  font-weight: 400;
   color: var(--text-strong);
   margin: 0 0 6px;
   font-size: 14px;
@@ -334,7 +334,7 @@ body {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.5;
-  font-weight: 650;
+  font-weight: 400;
 }
 
 .section {
@@ -354,7 +354,7 @@ body {
   color: var(--text-strong);
   font-size: 28px;
   letter-spacing: -0.03em;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .sectionSubtitle {
@@ -362,7 +362,7 @@ body {
   color: var(--muted);
   line-height: 1.7;
   max-width: 62ch;
-  font-weight: 650;
+  font-weight: 400;
 }
 
 .grid4 {
@@ -395,7 +395,7 @@ body {
 .cardTitle {
   margin: 0 0 10px;
   color: var(--text-strong);
-  font-weight: 950;
+  font-weight: 400;
   letter-spacing: -0.02em;
   font-size: 16px;
   display: flex;
@@ -407,7 +407,7 @@ body {
   margin: 0;
   color: var(--muted);
   line-height: 1.7;
-  font-weight: 650;
+  font-weight: 400;
   font-size: 14px;
 }
 
@@ -433,7 +433,7 @@ body {
   margin: 0 0 14px;
   color: var(--muted);
   line-height: 1.75;
-  font-weight: 650;
+  font-weight: 400;
 }
 
 .testimonialFooter {
@@ -446,13 +446,13 @@ body {
 }
 
 .testimonialName {
-  font-weight: 950;
+  font-weight: 400;
   color: var(--text-strong);
 }
 
 .testimonialRole {
   color: var(--muted);
-  font-weight: 800;
+  font-weight: 400;
   font-size: 13px;
 }
 
@@ -463,7 +463,7 @@ body {
 }
 
 .statValue {
-  font-weight: 1000;
+  font-weight: 400;
   font-size: 26px;
   color: var(--text-strong);
   letter-spacing: -0.02em;
@@ -486,7 +486,7 @@ body {
 .statLabel {
   margin: 0;
   color: var(--muted);
-  font-weight: 750;
+  font-weight: 400;
   font-size: 13px;
   line-height: 1.5;
 }
@@ -501,7 +501,7 @@ body {
   margin: 12px 0 0;
   padding-left: 18px;
   color: var(--muted);
-  font-weight: 650;
+  font-weight: 400;
   line-height: 1.85;
 }
 
@@ -524,7 +524,7 @@ body {
   border-radius: 18px;
   display: grid;
   place-items: center;
-  font-weight: 950;
+  font-weight: 400;
   color: #fff;
   letter-spacing: -0.02em;
   border: 1px solid rgba(255, 255, 255, 0.25);
@@ -532,7 +532,7 @@ body {
 }
 
 .teamName {
-  font-weight: 1000;
+  font-weight: 400;
   color: var(--text-strong);
   margin: 0;
 }
@@ -540,7 +540,7 @@ body {
 .teamRole {
   margin: 2px 0 0;
   color: var(--muted);
-  font-weight: 850;
+  font-weight: 400;
   font-size: 13px;
 }
 
@@ -552,7 +552,7 @@ body {
 }
 
 .milestoneValue {
-  font-weight: 1000;
+  font-weight: 400;
   color: var(--text-strong);
   font-size: 18px;
   margin-bottom: 6px;
@@ -576,7 +576,7 @@ body {
 }
 
 .label {
-  font-weight: 900;
+  font-weight: 400;
   color: var(--text-strong);
   font-size: 13px;
 }
@@ -607,13 +607,13 @@ body {
 
 .errorText {
   color: #b91c1c;
-  font-weight: 850;
+  font-weight: 400;
   font-size: 13px;
 }
 
 .successText {
   color: #0f766e;
-  font-weight: 900;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -628,21 +628,21 @@ body {
 }
 
 .contactLabel {
-  font-weight: 950;
+  font-weight: 400;
   color: var(--text-strong);
   font-size: 13px;
 }
 
 .contactValue {
   color: var(--muted);
-  font-weight: 750;
+  font-weight: 400;
   line-height: 1.7;
 }
 
 .contactValue a {
   color: var(--muted);
   text-decoration: none;
-  font-weight: 750;
+  font-weight: 400;
 }
 
 .contactValue a:hover {
@@ -684,7 +684,7 @@ body {
 
 .footerLinks a {
   color: var(--muted);
-  font-weight: 850;
+  font-weight: 400;
   font-size: 13px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -702,7 +702,7 @@ body {
 .footerLinkItem {
   text-decoration: none;
   color: var(--muted);
-  font-weight: 850;
+  font-weight: 400;
   font-size: 13px;
   padding: 8px 10px;
   border-radius: 12px;
@@ -731,7 +731,7 @@ body {
 }
 
 .footerHeading {
-  font-weight: 950;
+  font-weight: 700;
   color: var(--text-strong);
   font-size: 13px;
   letter-spacing: -0.01em;
@@ -744,7 +744,7 @@ body {
 
 .footerContactText {
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 13px;
   line-height: 1.6;
 }
@@ -787,7 +787,7 @@ body {
 
 .logosLabel {
   font-size: 13px;
-  font-weight: 900;
+  font-weight: 400;
   color: var(--muted);
   margin-bottom: 12px;
 }
@@ -804,7 +804,7 @@ body {
   border: 1px solid var(--border);
   background: rgba(56, 189, 248, 0.06);
   color: var(--muted);
-  font-weight: 850;
+  font-weight: 400;
   font-size: 13px;
   transition: transform 160ms ease, border-color 160ms ease, color 160ms ease,
     background 160ms ease;
@@ -842,11 +842,11 @@ body {
   background: rgba(56, 189, 248, 0.12);
   border: 1px solid rgba(56, 189, 248, 0.22);
   color: var(--primary);
-  font-weight: 1000;
+  font-weight: 400;
 }
 
 .stepTitle {
-  font-weight: 1000;
+  font-weight: 400;
   color: var(--text-strong);
   font-size: 16px;
 }
@@ -872,7 +872,7 @@ body {
 }
 
 .miniBulletTitle {
-  font-weight: 1000;
+  font-weight: 400;
   color: var(--text-strong);
   font-size: 14px;
   margin-bottom: 4px;
@@ -880,7 +880,7 @@ body {
 
 .miniBulletText {
   color: var(--muted);
-  font-weight: 650;
+  font-weight: 400;
   line-height: 1.6;
   font-size: 13px;
 }
@@ -957,7 +957,7 @@ body {
 
 .emiEyebrow {
   color: var(--muted);
-  font-weight: 900;
+  font-weight: 400;
   letter-spacing: 0.01em;
   font-size: 13px;
 }
@@ -966,7 +966,7 @@ body {
   margin: 0;
   font-size: 30px;
   letter-spacing: -0.03em;
-  font-weight: 950;
+  font-weight: 700;
   color: var(--text-strong);
   line-height: 1.15;
 }
@@ -975,7 +975,7 @@ body {
   margin: 8px 0 0;
   color: var(--muted);
   line-height: 1.6;
-  font-weight: 650;
+  font-weight: 400;
   max-width: 62ch;
 }
 
@@ -1010,7 +1010,7 @@ body {
 }
 
 .emiSectionTitle {
-  font-weight: 1000;
+  font-weight: 400;
   color: var(--text-strong);
   font-size: 18px;
   margin-bottom: 14px;
@@ -1033,14 +1033,14 @@ body {
 }
 
 .emiLabel {
-  font-weight: 950;
+  font-weight: 400;
   color: var(--text-strong);
   font-size: 13px;
 }
 
 .emiValue {
   color: var(--text-strong);
-  font-weight: 1000;
+  font-weight: 400;
 }
 
 .emiRange input[type='range'] {
@@ -1052,7 +1052,7 @@ body {
   display: flex;
   justify-content: space-between;
   color: var(--muted);
-  font-weight: 850;
+  font-weight: 400;
   font-size: 12px;
   margin-top: 8px;
 }
@@ -1071,14 +1071,14 @@ body {
 
 .emiBigLabel {
   color: rgba(255, 255, 255, 0.75);
-  font-weight: 800;
+  font-weight: 400;
   font-size: 13px;
   margin-bottom: 8px;
   text-align: center;
 }
 
 .emiBigValue {
-  font-weight: 1000;
+  font-weight: 400;
   font-size: 32px;
   letter-spacing: -0.03em;
   text-align: center;
@@ -1100,13 +1100,13 @@ body {
 
 .emiMiniLabel {
   color: rgba(255, 255, 255, 0.75);
-  font-weight: 800;
+  font-weight: 400;
   font-size: 12px;
   margin-bottom: 10px;
 }
 
 .emiMiniValue {
-  font-weight: 1000;
+  font-weight: 400;
   font-size: 18px;
 }
 
@@ -1131,12 +1131,12 @@ body {
 }
 
 .emiApplyStrong {
-  font-weight: 1000;
+  font-weight: 400;
 }
 
 .emiApplySub {
   color: rgba(255, 255, 255, 0.75);
-  font-weight: 700;
+  font-weight: 400;
   font-size: 13px;
   line-height: 1.4;
 }
@@ -1165,7 +1165,7 @@ body {
 
 .ctaKicker {
   color: var(--primary);
-  font-weight: 950;
+  font-weight: 400;
   font-size: 13px;
   margin-bottom: 8px;
 }
@@ -1175,12 +1175,13 @@ body {
   font-size: 32px;
   line-height: 1.1;
   letter-spacing: -0.04em;
+  font-weight: 700;
 }
 
 .ctaText {
   margin: 10px 0 0;
   color: var(--muted);
-  font-weight: 650;
+  font-weight: 400;
   line-height: 1.7;
   max-width: 58ch;
 }
@@ -1358,14 +1359,14 @@ body {
   border: 1px solid rgba(56, 189, 248, 0.28);
   background: rgba(56, 189, 248, 0.12);
   color: rgba(255, 255, 255, 0.85);
-  font-weight: 900;
+  font-weight: 400;
   font-size: 13px;
   margin-bottom: 16px;
 }
 
 .finHeroTitle {
   color: rgba(255, 255, 255, 0.98);
-  font-weight: 950;
+  font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1.02;
   font-size: clamp(34px, 4vw, 56px);
@@ -1375,7 +1376,7 @@ body {
 
 .finHeroSub {
   color: rgba(255, 255, 255, 0.78);
-  font-weight: 650;
+  font-weight: 400;
   line-height: 1.75;
   font-size: 18px;
   margin: 0 0 22px;
@@ -1398,7 +1399,7 @@ body {
   ) !important;
   border-color: rgba(196, 234, 60, 0.55) !important;
   color: rgba(6, 19, 39, 0.98) !important;
-  font-weight: 1000;
+  font-weight: 400;
   padding: 12px 18px !important;
 }
 
@@ -1432,7 +1433,7 @@ body {
   border: none;
   background: transparent;
   color: rgba(255, 255, 255, 0.92) !important;
-  font-weight: 950;
+  font-weight: 400;
   text-decoration: none;
   transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
 }
@@ -1462,7 +1463,7 @@ body {
   align-items: center;
   gap: 16px;
   color: rgba(255, 255, 255, 0.78);
-  font-weight: 1000;
+  font-weight: 400;
 }
 
 .finHeroSliderArrow {
@@ -1514,7 +1515,7 @@ body {
   gap: 10px;
   z-index: 3;
   color: rgba(255, 255, 255, 0.72);
-  font-weight: 850;
+  font-weight: 400;
   letter-spacing: 0.04em;
   font-size: 12px;
   user-select: none;
@@ -1566,7 +1567,7 @@ body {
 
 .finHeroWidgetTitle {
   color: rgba(255, 255, 255, 0.92);
-  font-weight: 950;
+  font-weight: 400;
   letter-spacing: -0.02em;
   margin-bottom: 14px;
   font-size: 16px;
@@ -1600,7 +1601,7 @@ body {
   border-radius: 16px;
   display: grid;
   place-items: center;
-  font-weight: 1000;
+  font-weight: 400;
   color: rgba(255, 255, 255, 0.92);
   border: 1px solid rgba(56, 189, 248, 0.35);
   background: rgba(56, 189, 248, 0.12);
@@ -1608,7 +1609,7 @@ body {
 
 .finHeroWidgetStepText {
   color: rgba(255, 255, 255, 0.82);
-  font-weight: 750;
+  font-weight: 400;
   line-height: 1.35;
   font-size: 14px;
 }
@@ -1700,7 +1701,7 @@ body {
   display: flex;
   gap: 10px;
   align-items: center;
-  font-weight: 1000;
+  font-weight: 400;
   color: var(--text-strong);
   letter-spacing: -0.02em;
   margin: 0;
@@ -1721,7 +1722,7 @@ body {
 .productCardText {
   margin: 0;
   color: var(--muted);
-  font-weight: 650;
+  font-weight: 400;
   line-height: 1.7;
   font-size: 14px;
 }
@@ -1736,7 +1737,7 @@ body {
   gap: 10px;
   text-decoration: none;
   color: var(--primary);
-  font-weight: 950;
+  font-weight: 400;
   padding: 10px 12px;
   border-radius: 14px;
   border: 1px solid rgba(11, 77, 179, 0.18);
@@ -1795,7 +1796,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.16);
   background: rgba(7, 26, 51, 0.62);
   color: rgba(255, 255, 255, 0.92);
-  font-weight: 1000;
+  font-weight: 400;
 }
 
 .checkList {
@@ -1810,7 +1811,7 @@ body {
   position: relative;
   padding-left: 26px;
   color: var(--muted);
-  font-weight: 700;
+  font-weight: 400;
   line-height: 1.6;
 }
 
@@ -1827,7 +1828,7 @@ body {
   background: rgba(56, 189, 248, 0.12);
   border: 1px solid rgba(56, 189, 248, 0.24);
   color: var(--primary);
-  font-weight: 1000;
+  font-weight: 400;
   font-size: 14px;
 }
 
@@ -1880,6 +1881,7 @@ body {
 
 .finSubHeroTitle {
   font-size: clamp(30px, 4vw, 48px);
+  font-weight: 700;
 }
 
 .serviceGrid {
@@ -2138,7 +2140,7 @@ body {
 .stepIndex {
   margin-top: 4px;
   font-size: 12px;
-  font-weight: 950;
+  font-weight: 400;
   letter-spacing: 0.08em;
   color: rgba(71, 85, 105, 0.9);
 }
@@ -2215,7 +2217,7 @@ body {
 
 .testimonialStars {
   color: #fbbf24;
-  font-weight: 1000;
+  font-weight: 400;
   letter-spacing: 0.08em;
   font-size: 14px;
   display: inline-flex;
@@ -2233,7 +2235,7 @@ body {
   border-radius: 18px;
   display: grid;
   place-items: center;
-  font-weight: 1000;
+  font-weight: 400;
   color: var(--primary);
   background: rgba(56, 189, 248, 0.12);
   border: 1px solid rgba(56, 189, 248, 0.24);
